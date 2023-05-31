@@ -1,0 +1,17 @@
+public class Main {
+    public static void moveDisks(int n, char source, char destination, char auxiliary) {
+        if (n == 1) {
+            System.out.println("Move disk 1 from " + source + " to " + destination);
+            return;
+        }
+        
+        moveDisks(n - 1, source, auxiliary, destination);
+        System.out.println("Move disk " + n + " from " + source + " to " + destination);
+        moveDisks(n - 1, auxiliary, destination, source);
+    }
+
+    public static void main(String[] args) {
+        int numDisks = 3; // Change this value to the desired number of disks
+        moveDisks(numDisks, 'A', 'C', 'B');
+    }
+}
