@@ -1,0 +1,9 @@
+a Node class that has three fields key, left, and right, representing the value of the node and its left and right child nodes. It also defines a BinaryTree class that has a root field and provides methods to insert nodes and to perform an inorder traversal of the tree.
+
+In the BinaryTree class, the insert method first calls the insertNode method with the root and the key to be inserted. The insertNode method checks if the root is empty. If it is, then it creates a new node with the given key and returns it. Otherwise, it recursively calls itself with either the left or the right child of the root, depending on whether the key is less than or greater than the value of the root.
+
+The inorderTraversal method recursively traverses the left subtree of the node, prints the value of the node, and then traverses the right subtree of the node.
+
+In the main method, a new BinaryTree object is created and nodes with values of 50, 30, 20, 40, 70, 60, and 80 are inserted. Then, the tree is traversed using inorder traversal.
+
+Note that this code assumes that the Node class is defined in the same file as the BinaryTree class, as both are in the same package. If they were defined in different files, the Node class would need to be imported.
